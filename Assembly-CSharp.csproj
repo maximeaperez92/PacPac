@@ -60,12 +60,21 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Accessor\TAccessor.cs" />
      <Compile Include="Assets\Scripts\GameHandler.cs" />
+     <Compile Include="Assets\Scripts\Module\EatEdibleScript.cs" />
      <Compile Include="Assets\Scripts\Module\EdibleModule.cs" />
      <Compile Include="Assets\Scripts\Module\FollowTarget.cs" />
+     <Compile Include="Assets\Scripts\Module\KillPlayerScript.cs" />
+     <Compile Include="Assets\Scripts\Module\Pacman.cs" />
      <Compile Include="Assets\Scripts\Module\ScoreModule.cs" />
      <Compile Include="Assets\Scripts\Module\TargetEdible.cs" />
+     <Compile Include="Assets\Scripts\Updater\EatEdibleUpdater.cs" />
+     <Compile Include="Assets\Scripts\Updater\EdibleModuleUpdater.cs" />
+     <Compile Include="Assets\Scripts\Updater\FollowTargetUpdater.cs" />
      <Compile Include="Assets\Scripts\Updater\IUpdater.cs" />
+     <Compile Include="Assets\Scripts\Updater\KillPlayerUpdater.cs" />
      <Compile Include="Assets\Scripts\Updater\MyUpdater.cs" />
+     <Compile Include="Assets\Scripts\Updater\TargetEdibleUpdater.cs" />
+     <Compile Include="Assets\Scripts\Updater\UpdateManager.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/user/Documents/Ecole/ESGI/3DJV/Pacman_ECS/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

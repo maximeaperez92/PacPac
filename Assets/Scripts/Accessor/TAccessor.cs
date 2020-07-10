@@ -37,4 +37,9 @@ public class TAccessor<T>
     {
         _modules.Remove(module);
     }
+
+    public T GetModule(int i)
+    {
+        return _modules[i];
+    }
 }
