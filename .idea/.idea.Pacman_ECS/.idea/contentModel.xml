@@ -10,12 +10,13 @@
           <e p="Accessor" t="Include">
             <e p="TAccessor.cs" t="Include" />
           </e>
+          <e p="GameHandler.cs" t="Include" />
           <e p="Module" t="Include">
             <e p="FollowTarget.cs" t="Include" />
-            <e p="TModule.cs" t="Include" />
           </e>
           <e p="Updater" t="Include">
             <e p="IUpdater.cs" t="Include" />
+            <e p="MyUpdater.cs" t="Include" />
           </e>
         </e>
       </e>

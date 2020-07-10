@@ -8,6 +8,16 @@ public class FollowTarget : MonoBehaviour
     
     void Start()
     {
-        Accessor.TAccessor<FollowTarget>.Instantiate().AddModule(this);
+        TAccessor<FollowTarget>.Instance().AddModule(this);
+        Debug.Log("Module followTarget ajouté");
+    }
+
+    public void UpdateModule()
+    {
+        if (!target) target = GameObject.Find("Pacman").transform;
+        
+        // 10 = moveSpeed
+        transform.LookAt(target);
+        transform.position += transform.rotation * Vector3.forward * 10 * Time.deltaTime;
     }
 }

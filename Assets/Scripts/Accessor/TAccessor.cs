@@ -3,33 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace Accessor
+public class TAccessor<T>
 {
-    public class TAccessor<T>
+    private static TAccessor<T> _instance;
+    private List<T> _modules;
+
+    public static TAccessor<T> Instance()
     {
-        private static TAccessor<T> _instance;
-        private List<T> _modules;
-
-        public static TAccessor<T> Instantiate()
+        if (_instance == null)
         {
-            if (_instance == null) _instance = new TAccessor<T>();
-            
-            return _instance;
+            _instance = new TAccessor<T>();
         }
 
-        private TAccessor()
-        {
-            _modules = new List<T>();
-        }
+        return _instance;
+    }
 
-        public List<T> GetModules()
-        {
-            return _modules;
-        }
+    private TAccessor()
+    {
+        _modules = new List<T>();
+    }
 
-        public void AddModule(T module)
-        {
-            _modules.Add(module);
-        }
+    public List<T> GetModules()
+    {
+        return _modules;
+    }
+
+    public void AddModule(T module)
+    {
+        _modules.Add(module);
     }
 }

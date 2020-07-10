@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Updater
-{
-    public interface IUpdater
-    {
-    
-    }
+
+public interface IUpdater
+{ 
+    void SystemUpdate();
 }
