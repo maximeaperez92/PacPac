@@ -32,4 +32,9 @@ public class TAccessor<T>
     {
         _modules.Add(module);
     }
+
+    public void RemoveModule(T module)
+    {
+        _modules.Remove(module);
+    }
 }

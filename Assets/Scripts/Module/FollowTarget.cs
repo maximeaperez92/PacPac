@@ -19,5 +19,11 @@ public class FollowTarget : MonoBehaviour
         // 10 = moveSpeed
         transform.LookAt(target);
         transform.position += transform.rotation * Vector3.forward * moveSpeed * Time.deltaTime;
+
+        if (Vector3.Distance(transform.position, target.transform.position) < .5f)
+        {
+            TAccessor<>.Instance().GetModules().RemoveModule();
+            Destroy(target.gameObject);
+        }
     }
 }

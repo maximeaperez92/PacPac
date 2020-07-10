@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class EdibleModule : MonoBehaviour
 {
-    
+    [SerializeField] private GameObject fruit;
     
     void Start()
     {
@@ -23,9 +24,11 @@ public class EdibleModule : MonoBehaviour
             {
                 if (Vector3.Distance(transform.position, targetEd.fruitTarget.transform.position) < .1f)
                 {
-                    Debug.Log("Destruction");
-                    Debug.Log(targetEd.fruitTarget.gameObject);
                     Destroy(targetEd.fruitTarget.gameObject);
+                    
+                    Vector3 position = new Vector3(Random.Range(-10.0f, 10.0f), 0.5f, Random.Range(-10.0f, 10.0f));
+                    GameObject newFruit = Instantiate(fruit, position, Quaternion.identity);
+                    targetEd.fruitTarget = newFruit.transform;
                 }
             }
         }
