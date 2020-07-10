@@ -5,11 +5,11 @@ using UnityEngine;
 public class FollowTarget : MonoBehaviour
 {
     public Transform target;
+    private int moveSpeed = 10;
     
     void Start()
     {
         TAccessor<FollowTarget>.Instance().AddModule(this);
-        Debug.Log("Module followTarget ajouté");
     }
 
     public void UpdateModule()
@@ -18,6 +18,6 @@ public class FollowTarget : MonoBehaviour
         
         // 10 = moveSpeed
         transform.LookAt(target);
-        transform.position += transform.rotation * Vector3.forward * 10 * Time.deltaTime;
+        transform.position += transform.rotation * Vector3.forward * moveSpeed * Time.deltaTime;
     }
 }

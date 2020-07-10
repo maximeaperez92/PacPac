@@ -60,7 +60,9 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Accessor\TAccessor.cs" />
      <Compile Include="Assets\Scripts\GameHandler.cs" />
+     <Compile Include="Assets\Scripts\Module\EdibleModule.cs" />
      <Compile Include="Assets\Scripts\Module\FollowTarget.cs" />
+     <Compile Include="Assets\Scripts\Module\TargetEdible.cs" />
      <Compile Include="Assets\Scripts\Updater\IUpdater.cs" />
      <Compile Include="Assets\Scripts\Updater\MyUpdater.cs" />
  <Reference Include="Unity.Timeline.Editor">
