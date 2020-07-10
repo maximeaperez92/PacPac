@@ -10,10 +10,18 @@ public class TargetEdible : MonoBehaviour
     {
         TAccessor<TargetEdible>.Instance().AddModule(this);
     }
+    
+    public void deleteModule()
+    {
+        TAccessor<TargetEdible>.Instance().RemoveModule(this);
+    }
 
     public void UpdateModule()
     {
-        if (!fruitTarget) fruitTarget = GameObject.Find("Fruit").transform;
+        if (!fruitTarget)
+        {
+            fruitTarget = GameObject.FindWithTag("Fruit").transform;
+        }
         
         transform.LookAt(fruitTarget);
         transform.position += transform.rotation * Vector3.forward * moveSpeed * Time.deltaTime;

@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class FollowTarget : MonoBehaviour
 {
+    [SerializeField] private GameObject pacman;
     public Transform target;
-    private int moveSpeed = 10;
+    private int moveSpeed = 12;
     
     void Start()
     {
@@ -22,8 +23,15 @@ public class FollowTarget : MonoBehaviour
 
         if (Vector3.Distance(transform.position, target.transform.position) < .5f)
         {
-            TAccessor<>.Instance().GetModules().RemoveModule();
+            target.gameObject.GetComponent<EdibleModule>().deleteModule();
+            target.gameObject.GetComponent<TargetEdible>().deleteModule();
+            
             Destroy(target.gameObject);
+            
+            Vector3 position = new Vector3(Random.Range(-25f, 25f), 0.5f, Random.Range(-25f, 25f));
+            GameObject obj = Instantiate(pacman, position, Quaternion.identity);
+            
+            target = obj.transform;
         }
     }
 }

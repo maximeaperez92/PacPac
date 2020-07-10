@@ -62,7 +62,7 @@
      <Compile Include="Assets\Scripts\GameHandler.cs" />
      <Compile Include="Assets\Scripts\Module\EdibleModule.cs" />
      <Compile Include="Assets\Scripts\Module\FollowTarget.cs" />
-     <Compile Include="Assets\Scripts\Module\KillPlayerScript.cs" />
+     <Compile Include="Assets\Scripts\Module\ScoreModule.cs" />
      <Compile Include="Assets\Scripts\Module\TargetEdible.cs" />
      <Compile Include="Assets\Scripts\Updater\IUpdater.cs" />
      <Compile Include="Assets\Scripts\Updater\MyUpdater.cs" />
