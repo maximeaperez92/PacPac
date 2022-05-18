@@ -15,7 +15,7 @@ public class EatEdibleUpdater : IUpdater
             {
                 // Le pacman mange un fruit
                 
-                
+                Destroy(targetEd.fruitTarget.gameObject);
             }
         }
     }

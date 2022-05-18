@@ -15,9 +15,4 @@ public class TargetEdible : MonoBehaviour
     {
         TAccessor<TargetEdible>.Instance().RemoveModule(this);
     }
-
-    public void UpdateModule()
-    {
-        
-    }
 }
